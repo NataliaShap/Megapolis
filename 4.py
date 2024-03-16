@@ -8,12 +8,12 @@ with open('vacancy.csv', encoding='utf-8') as file, open('vacancy_procent.csv', 
     data = list(csv.reader(file, delimiter=';'))
     res = csv.writer(new_file, delimiter=';')
 
-    a=[]
+    a=[] # a - список
     data[0].append('precent')
     for stroka in data[1:]:
         if stroka[0] != 'None':
             a.append(int(stroka[0]))
-    sred=(sum(a) / len(a))
+    sred=(sum(a) / len(a)) # sred - среднее значение
 
     for stroka in data[1:]:
         if stroka[0] != 'None':
