@@ -21,4 +21,3 @@ with open('vacancy.csv', encoding='utf-8') as file, open('vacancy_procent.csv', 
         else:
             stroka = str(proc(sred))
             res.writerow(stroka)
-        print(stroka)
